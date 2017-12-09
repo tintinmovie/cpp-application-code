@@ -151,6 +151,23 @@ int is_winner(char ch)
 int authenticated_index(int index)
 {
 	//Code goes here
+	//Index is greater than the size of the array
+	if (index > sizeof(a))
+	{
+		return 0;	
+	}
+	//The given index in the array, has a value other than 'T' - meaning a player has already entered that index before
+	if (a[index] != 'T') 
+	{
+		//Returns zero, meaning that the player cannot place their 'piece' down
+		return 0;	
+	}
+	
+	else
+	{
+		return 1;;
+	}	
+	
 	
 
 }
