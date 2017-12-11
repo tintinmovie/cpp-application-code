@@ -43,7 +43,7 @@ int main()
 
 
 // Bloque principal para el juego Tic-Tac-Toe
-// El juego empieza desde aquÌ, juego por turnos
+// El juego empieza desde aqu√≠, juego por turnos
 void tic_tac_toe()
 {
 	int flag = 0, turn_counter = 1;
@@ -59,17 +59,17 @@ void tic_tac_toe()
 		while(1)
 		{
 
-			// Verifica si el jugador2 no presionÛ la tecla continuar,
+			// Verifica si el jugador2 no presion√≥ la tecla continuar,
 			// Si no lo hizo, es el turno de jugador1
 			//
 			if ( continue_p2 != 1 )
 			{
 				cout<<"Jugador1 -> ";
-				// El usuario ingresa la posiciÛn que adem·s se utiliza como Ìndice para almacenar '0' en dicha posiciÛn del array
+				// El usuario ingresa la posici√≥n que adem√°s se utiliza como √≠ndice para almacenar '0' en dicha posici√≥n del array
 				cin>>zero;
 
 
-					// Verifica si el Ìndice ingresado por el usuario es v·lido o no
+					// Verifica si el √≠ndice ingresado por el usuario es v√°lido o no
 					if (( authenticated_index(zero-1)) )
 					{
 						++turn_counter;
@@ -94,7 +94,7 @@ void tic_tac_toe()
 			cout<<"Jugador2 -> ";
 			cin>>cross;
 
-				// Verifica si el Ìndice ingresado por el usuario es v·lido o no
+				// Verifica si el √≠ndice ingresado por el usuario es v√°lido o no
 				if (authenticated_index(cross-1))
 				{
 
@@ -111,11 +111,11 @@ void tic_tac_toe()
 						}
 				}
 
-				// Si el Ìndice ingresado por el usuario no es v·lido
+				// Si el √≠ndice ingresado por el usuario no es v√°lido
 				// Continua dentro del bucle de manera que Jugador2 sigue con su turno
 				else
 				{
-					// Configurando un indicador 'continue_p2' para seÒalar que
+					// Configurando un indicador 'continue_p2' para se√±alar que
 					// Jugador2 tiene la orden de continuar y que
 					// el turno sigue siendo del jugador2 y no del Jugador1
 					continue_p2 = 1;
@@ -128,12 +128,12 @@ void tic_tac_toe()
 
 
 
-// Devuelve un numero distinto de cero si el jugador llamando la funciÛn gana
-// y retorna 0 si el jugador llamando la funciÛn no ganÛ a˙n.
+// Devuelve un numero distinto de cero si el jugador llamando la funci√≥n gana
+// y retorna 0 si el jugador llamando la funci√≥n no gan√≥ a√∫n.
 //
 int is_winner(char ch)
 {
-	// El codigo va aquÌ
+	// El codigo va aqu√≠
 
 
 }
@@ -149,7 +149,7 @@ int is_winner(char ch)
 //
 int authenticated_index(int index)
 {
-	// El codigo va aquÌ
+	// El codigo va aqu√≠
 
 
 }
