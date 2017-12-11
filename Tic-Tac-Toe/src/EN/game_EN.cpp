@@ -77,7 +77,7 @@ void tic_tac_toe()
 						a[zero-1] = '0';				
 						show_status_ttt();
 						
-							if (turn_counter > 4 && is_winner('0'))	
+							if (turn_counter > 4 && is_winner('0', a))	
 							{
 								cout<<"Congratulations!!\n";
 								cout<<"Player 1 wins !\n";
@@ -104,7 +104,7 @@ void tic_tac_toe()
 					show_status_ttt();
 					continue_p2 = 0;					
 	
-						if (turn_counter > 4  && is_winner('X'))
+						if (turn_counter > 4  && is_winner('X', a))
 						{
 							cout<<"Congratulations!!\n";
 							cout<<"Player 2 wins !\n";
@@ -132,10 +132,59 @@ void tic_tac_toe()
 // Returns a non-zero number if the player calling the function wins 
 // and returns 0 if the player calling the function has not won yet.
 //
-int is_winner(char ch)
+int is_winner(char ch, char array)
 {
 	// Code goes here
+	//Note there are 8 ways to win a standard game of tic tac toe (3x3 board), which means the following code will look at all of these eight ways
 	
+	//HORIZONTAL CHECK
+	//This line loop looks over the array looking for a win that is across the board (left to right, right to left)
+	//Note it will break once i is greater than 6. This because once it reaches
+	for (int i = 0; i < 6 ;i+=3)
+	{
+		//Checks whether a row has 3 consequetive chars that are the exact same, meaning the player won
+		if (array[i] == ch && array[i+1] == ch && array[i+2] == ch)
+		{
+			//This returns 1, meaning the player (represented by ch) has won
+			return 1;	
+		}
+	}
+	
+	//VERTICAL CHECK
+	//Contains the amount of columns (which should be the same to the number of rows)
+	int numberOfColumns = 3
+	//Loops through the columns (i starts at 1 and increase by 1 each time) 
+	//It will go through the top 3 chars in the array
+	for (int i=0; i < 2;i++) 
+	{
+		//Looks at every third character trying to find a vertical column with all the same character
+		if (array[i+numberOfColumns] == ch && array[i+numberOfColumns] == ch && array[i+numberOfColumns*2] == ch)
+		{
+			//A player has won!!!
+			return 1;	
+		}
+	}
+	
+	//HORIZONTAL CHECK
+	//Using just if statements as there are only two ways to win diagonally (ignoring order)
+	//Temp value as there is no for loop
+	int i = 0;
+	//Looks in diagonal. Note. The +4 could be replaced by numberofcolums + 1, as they are in relation to each other
+	if (array[0] == ch && array[4] == ch && array[8] == ch) 
+	{
+		//Player won
+		return 1;
+	}
+	
+	// Looks in the other diagonal way 
+	else if (array[2] == ch && array[4] && array[6])
+	{
+		//Player won
+	 	return 1;	
+	}
+	
+	//If non of the returns ran that means the player hasn't won yet
+	return 0;
 		
 }
 
