@@ -14,7 +14,7 @@ ________________________________________
 
 
 
-#include "strings.cpp"
+#include "strings_EN.cpp"
 #include <iostream>
 using namespace std;
 
