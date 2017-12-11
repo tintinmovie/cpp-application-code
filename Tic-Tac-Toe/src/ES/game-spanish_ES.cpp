@@ -1,7 +1,7 @@
 /*
 ________________________________________
 |                                       |
-|       game-spanish.cpp                        |
+|       game-spanish_ES.cpp                        |
 |                                        \
 |       Google-code-in (2k17-18)          \
 |                                          \
@@ -13,7 +13,7 @@ ________________________________________
 
 
 
-#include "strings.cpp"
+#include "strings-spanish_ES.cpp"
 #include <iostream>
 using namespace std;
 
